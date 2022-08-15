@@ -1,0 +1,14 @@
+# Local.
+**/*.txt
+**/*.pdf
+**/*.pkl
+**/*.png
+results
+.pickles
+
+# Python.
+**/__pycache__
+
+# VSCode.
+**/*.vscode
+**/*.code-workspace
