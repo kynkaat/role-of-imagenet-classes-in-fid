@@ -12,7 +12,7 @@ Tuomas Kynkäänniemi, Tero Karras, Miika Aittala, Timo Aila, Jaakko Lehtinen<br
 
 [Paper (arXiv)](https://arxiv.org/abs/2203.06026)
 
-Abstract: *Fréchet Inception Distance (FID) is the primary metric for ranking models in data-driven generative modelling. While remarkably successful, the metric is known to disagree with human judgement in many cases. We investigate a root cause of these discrepancies, and elucidate the role of ImageNet classes in FID. We show that the feature space FID is (typically) computed in is so close to the ImageNet classifications that aligning the histograms of Top-$N$ classifications between sets of generated and real images can reduce FID very substantially --- without actually improving the quality of results. Thus we conclude that FID prone to intentional or accidental distortions. As this attack has only a minor effect on the generated set of images, we conclude that FID has a large perceptual null space, and is therefore prone to intentional or accidental distortions. As a practical example of an accidental distortion, we explain a case where an ImageNet pre-trained FastGAN achieves a FID comparable to StyleGAN2, while being worse in terms of human evaluation.*
+Abstract: *Fréchet Inception Distance (FID) is the primary metric for ranking models in data-driven generative modeling. While remarkably successful, the metric is known to sometimes disagree with human judgement. We investigate a root cause of these discrepancies, and visualize what FID "looks at" in generated images. We show that the feature space that FID is (typically) computed in is so close to the ImageNet classifications that aligning the histograms of Top-$N$ classifications between sets of generated and real images can reduce FID substantially --- without actually improving the quality of results. Thus we conclude that FID is prone to intentional or accidental distortions. As a practical example of an accidental distortion, we discuss a case where an ImageNet pre-trained FastGAN achieves a FID comparable to StyleGAN2, while being worse in terms of human evaluation.*
 
 ## Setup and requirements
 
@@ -25,7 +25,7 @@ conda activate imagenet-classes-in-fid
 
 ## Usage
 
-This repository provides code for reproducing FID sensitivity heatmaps for individual images (Sec. 2.2) and probing the perceptual null space of FID by resampling features (Sec. 3.1-3.2).
+This repository provides code for reproducing FID sensitivity heatmaps for individual images (Sec. 2) and probing the perceptual null space of FID by resampling features (Sec. 3).
 
 To run the below code examples, you first need to prepare or [download](https://drive.google.com/drive/u/1/folders/1WPrdPC1DlnsxLWgXTE64qsriCCcxve5y) the `256x256` resolution FFHQ dataset in ZIP format. Help for preparing the dataset can found [here](https://github.com/NVlabs/stylegan2-ada-pytorch). If automatic downloading of network pickles from Google Drive fails they can be manually downloaded from [here](https://drive.google.com/drive/folders/1WPrdPC1DlnsxLWgXTE64qsriCCcxve5y?usp=sharing).
 
