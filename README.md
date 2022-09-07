@@ -69,7 +69,7 @@ Additionally, resampling can be run in four different modes: `pre_logits`, `logi
 
 ## License
 
-The code of this repository is released under the [CC BY-NC-SA 4.0](https://github.com/kynkaat/role-of-imagenet-classes-in-fid/master/LICENSE) license. This repository adapts code from [StyleGAN2](https://github.com/NVlabs/stylegan2), [StyleGAN2-ADA](https://github.com/NVlabs/stylegan2-ada-pytorch), and [PyTorch Grad-CAM](https://github.com/jacobgil/pytorch-grad-cam) which are released under NVIDIA Source Code License and MIT License, respectively. The `clip-vit_b32.pkl` is derived from the pre-trained [CLIP ViT-B/32](https://arxiv.org/abs/2103.00020) by OpenAI which is originally shared under MIT License in GitHub [repository](https://github.com/openai/CLIP).
+The code of this repository is released under the [CC BY-NC-SA 4.0](https://github.com/kynkaat/role-of-imagenet-classes-in-fid/blob/master/LICENSE) license. This repository adapts code from [StyleGAN2](https://github.com/NVlabs/stylegan2), [StyleGAN2-ADA](https://github.com/NVlabs/stylegan2-ada-pytorch), and [PyTorch Grad-CAM](https://github.com/jacobgil/pytorch-grad-cam) which are released under NVIDIA Source Code License and MIT License, respectively. The `clip-vit_b32.pkl` is derived from the pre-trained [CLIP ViT-B/32](https://arxiv.org/abs/2103.00020) by OpenAI which is originally shared under MIT License in GitHub [repository](https://github.com/openai/CLIP).
 
 ## Citation
 
