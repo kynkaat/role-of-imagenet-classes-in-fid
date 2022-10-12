@@ -12,6 +12,7 @@ from utils import create_results_dir
 @click.option('--zip_path', required=True, type=str, help='Path to zip dataset.')
 @click.option('--network_pkl', required=True, type=str, help='Path to network pickle.')
 @click.option('--resolution', default=256, type=int, help='Resolution of zip dataset images.')
+@click.option('--num_images', default=50000, type=int, help='Number of images in the zip dataset.')
 @click.option('--seeds', default=None, type=str, help='Generate images with specific seeds.')
 @click.option('--save_classifications', default=False, type=bool, help='Flag to save classifications.')
 @click.option('--gen_grid', default=False, type=bool, help='Create grid of heatmaps.')
@@ -21,6 +22,7 @@ from utils import create_results_dir
 def main(zip_path: str,
          network_pkl: str,
          resolution: int,
+         num_images: int,
          seeds: list,
          save_classifications: bool,
          gen_grid: bool,
@@ -57,6 +59,7 @@ def main(zip_path: str,
                        zip_path=zip_path,
                        pkl_path=network_pkl,
                        resolution=resolution,
+                       num_images=num_images,
                        image_seeds=seeds,
                        save_classifications=save_classifications,
                        gen_grid=gen_grid,
