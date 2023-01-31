@@ -74,16 +74,15 @@ The code of this repository is released under the [CC BY-NC-SA 4.0](https://gith
 ## Citation
 
 ```
-@article{Kynkaanniemi2022,
+@inproceedings{Kynkaanniemi2022,
   author    = {Tuomas Kynkäänniemi and
                Tero Karras and
                Miika Aittala and
                Timo Aila and
                Jaakko Lehtinen},
   title     = {The Role of ImageNet Classes in Fréchet Inception Distance},
-  journal   = {CoRR},
-  volume    = {abs/2203.06026},
-  year      = {2022},
+  booktitle = {Proc. ICLR},
+  year      = {2023},
 }
 ```
 
