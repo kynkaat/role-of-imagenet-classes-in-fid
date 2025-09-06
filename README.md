@@ -12,7 +12,7 @@ Tuomas Kynkäänniemi, Tero Karras, Miika Aittala, Timo Aila, Jaakko Lehtinen<br
 
 [Paper (arXiv)](https://arxiv.org/abs/2203.06026)
 
-Abstract: *Fréchet Inception Distance (FID) is the primary metric for ranking models in data-driven generative modeling. While remarkably successful, the metric is known to sometimes disagree with human judgement. We investigate a root cause of these discrepancies, and visualize what FID "looks at" in generated images. We show that the feature space that FID is (typically) computed in is so close to the ImageNet classifications that aligning the histograms of Top-$N$ classifications between sets of generated and real images can reduce FID substantially — without actually improving the quality of results. Thus we conclude that FID is prone to intentional or accidental distortions. As a practical example of an accidental distortion, we discuss a case where an ImageNet pre-trained FastGAN achieves a FID comparable to StyleGAN2, while being worse in terms of human evaluation.*
+Abstract: _Fréchet Inception Distance (FID) is the primary metric for ranking models in data-driven generative modeling. While remarkably successful, the metric is known to sometimes disagree with human judgement. We investigate a root cause of these discrepancies, and visualize what FID "looks at" in generated images. We show that the feature space that FID is (typically) computed in is so close to the ImageNet classifications that aligning the histograms of Top-$N$ classifications between sets of generated and real images can reduce FID substantially — without actually improving the quality of results. Thus we conclude that FID is prone to intentional or accidental distortions. As a practical example of an accidental distortion, we discuss a case where an ImageNet pre-trained FastGAN achieves a FID comparable to StyleGAN2, while being worse in terms of human evaluation._
 
 ## Setup
 
@@ -27,7 +27,7 @@ conda activate imagenet-classes-in-fid
 
 This repository provides code for reproducing FID sensitivity heatmaps for individual images (Sec. 2) and probing the perceptual null space of FID by resampling features (Sec. 3).
 
-To run the below code examples, you first need to prepare or [download](https://drive.google.com/drive/u/1/folders/1WPrdPC1DlnsxLWgXTE64qsriCCcxve5y) the `256x256` resolution FFHQ dataset in ZIP format. Help for preparing the dataset can found [here](https://github.com/NVlabs/stylegan2-ada-pytorch). If automatic downloading of network pickles from Google Drive fails they can be manually downloaded from [here](https://drive.google.com/drive/folders/1WPrdPC1DlnsxLWgXTE64qsriCCcxve5y?usp=sharing).
+To run the below code examples, you first need to prepare or [download](https://drive.google.com/drive/folders/1SVMIOBap1U_iRyZ1HBq4-9ss2iyDJPHj?usp=sharing) the `256x256` resolution FFHQ dataset in ZIP format. Help for preparing the dataset can found [here](https://github.com/NVlabs/stylegan2-ada-pytorch). If automatic downloading of network pickles from Google Drive fails they can be manually downloaded from [here](https://drive.google.com/drive/folders/1SVMIOBap1U_iRyZ1HBq4-9ss2iyDJPHj?usp=sharing).
 
 ### Sensitivity heatmaps
 
@@ -35,11 +35,11 @@ FID sensitivity heatmaps for StyleGAN2-generated images in FFHQ (Fig. 3) can be 
 
 ```
 python generate_heatmaps.py --zip_path=data_path \
-  --network_pkl=https://drive.google.com/uc?id=119HvnQ5nwHl0_vUTEFWQNk4bwYjoXTrC \
+  --network_pkl=/path/to/network.pkl \
   --seeds=[107,540,386,780,544,879]
 ```
 
-Running the command takes approximately 8 minutes with an NVIDIA Titan V GPU. Reference sensitivity heatmaps can be found from [here](https://drive.google.com/drive/folders/1KoXeO6CX5-wvaJEkalzVuv25Y9RAj9l9?usp=sharing). See `python generate_heatmaps.py --help` for more options.
+Running the command takes approximately 8 minutes with an NVIDIA Titan V GPU. Reference sensitivity heatmaps can be found from [here](https://drive.google.com/drive/folders/1SVMIOBap1U_iRyZ1HBq4-9ss2iyDJPHj?usp=sharing). See `python generate_heatmaps.py --help` for more options.
 
 ### Resampling features
 
@@ -47,7 +47,7 @@ Note: Running this requires a GPU with at least 26 GB of memory. All fringe feat
 
 ```
 python run_resampling.py --zip_path=data_path \
-  --network_pkl=https://drive.google.com/uc?id=119HvnQ5nwHl0_vUTEFWQNk4bwYjoXTrC \
+  --network_pkl=/path/to/network.pkl \
   --feature_mode=pre_logits
 ```
 
